@@ -1,21 +1,21 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <a href="{{ route("post.create" )}}">Crear</a><br><br>
-    <table>
+    <a class="btn btn-success mb-4" href="{{ route("post.create" )}}">Crear</a>
+    <table class="table">
         <thead>
             <tr>
                 <th>
-                    Titulo &emsp;&emsp;&emsp;
+                    Titulo
                 </th>
                 <th>
-                    Categoria &emsp;&emsp;&emsp;
+                    Categoria
                 </th>
                 <th>
-                    Posted &emsp;&emsp;&emsp;
+                    Posted
                 </th>
                 <th>
-                    Acciones &emsp;&emsp;&emsp;
+                    Acciones
                 </th>
             </tr>
         </thead>
@@ -32,12 +32,12 @@
                         {{ $p->posted }}
                     </td>
                     <td>
-                        <a href="{{ route("post.show",$p)}}">Consultar</a>
-                        <a href="{{ route("post.edit",$p)}}">Editar</a>
+                        <a class=" my-1 btn btn-primary" href="{{ route("post.show",$p)}}">Consultar</a>
+                        <a class=" my-1 btn btn-warning" href="{{ route("post.edit",$p)}}">Editar</a>
                         <form action="{{ route("post.destroy",$p)}}" method="post">
                         @method("DELETE")
                         @csrf
-                            <button type="submit">Eliminar</button>
+                            <button class=" my-1 btn btn-danger" type="submit">Eliminar</button>
                         
                         </form>
                     </td>
