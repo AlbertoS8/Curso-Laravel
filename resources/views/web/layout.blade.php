@@ -20,7 +20,7 @@
 <body class="font-sans antialiased dark:bg-gray-900" >
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <div style="color: aliceblue">
-            <div class="container px-80">
+            <div class="container px-75">
                 <div class="card card-black mt-6">
                     @yield('content')
                 </div>
