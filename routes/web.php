@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('welcome');
 });
 
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', "admin"]], function (){
@@ -60,4 +60,7 @@ Route::group(['prefix' => 'blog'],function () {
     Route::get('/{post}', "show")->name("web.blog.show");
    }); 
 });
+
+
+
 require __DIR__.'/auth.php';
